@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<meta charset="utf-8"/>
+<title>2048</title>
+<style>
+	#gridPanel{
+	width:480px;
+	height:480px;
+	background:#bbada0;
+	border-radius:10px;
+	margin:0 auto;
+	padding:10px;
+	position:relative;
+	}
+	.cell
+	{
+		margin:10px;
+		background:#ccc0b3;
+		float:left;
+	}
+	.cell,.fcell
+	{
+		width:100px;
+		height:100px;
+		border-radius:6px;
+	}
+	.fcell
+	{
+		background:#fff;
+		text-align:center;
+		line-height:100px;
+		font-size:40px;
+		position:absolute;
+		color:#333;
+	}
+	#fc00,#fc01,#fc02,#fc03
+	{
+		top:20px;
+	}
+	#fc10,#fc11,#fc12,#fc13
+	{
+		top:140px;
+	}
+	#fc20,#fc21,#fc22,#fc23
+	{
+		top:260px;
+	}
+	#fc30,#fc31,#fc32,#fc33
+	{
+		top:380px;
+	}
+	#fc00,#fc10,#fc20,#fc30
+	{
+		left:20px;
+	}
+	#fc01,#fc11,#fc21,#fc31
+	{
+		left:140px;
+	}
+	#fc02,#fc12,#fc22,#fc32
+	{
+		left:260px;
+	}
+	#fc03,#fc13,#fc23,#fc33
+	{
+		left:380px;
+	}
+	/*定义每个数字的背景色*/
+	.n2{background:#eee4da;}
+	.n4{background:#ede0c8;}
+	.n8{background:#f2b179;}
+	.n16{background:#f59563;}
+	.n32{background:#f67c5f;}
+	.n64{background:#f65e3b;}
+	.n128{background:#ed7f72;}
+	.n256{background:#edcc61;}
+	.n512{background:#9c0};
+	.n1024{background:#33b5e5;}
+	.n2048{background:#09c;}
+	.n4096{background:#a63;}
+	.n8192{background:#93c;}
+</style>
+</head>
+<body>
+	<div id="gridPanel">
+		<div id="c00" class="cell"></div>
+		<div id="c01" class="cell"></div>
+		<div id="c02" class="cell"></div>
+		<div id="c03" class="cell"></div>
+
+		<div id="c10" class="cell"></div>
+		<div id="c11" class="cell"></div>
+		<div id="c12" class="cell"></div>
+		<div id="c13" class="cell"></div>
+
+		<div id="c20" class="cell"></div>
+		<div id="c21" class="cell"></div>
+		<div id="c22" class="cell"></div>
+		<div id="c23" class="cell"></div>
+
+		<div id="c30" class="cell"></div>
+		<div id="c31" class="cell"></div>
+		<div id="c32" class="cell"></div>
+		<div id="c33" class="cell"></div>
+		<!-存数字-->
+		<div id="fc00" class="fcell"></div>
+		<div id="fc01" class="fcell"></div>
+		<div id="fc02" class="fcell"></div>
+		<div id="fc03" class="fcell"></div>
+
+		<div id="fc10" class="fcell"></div>
+		<div id="fc11" class="fcell"></div>
+		<div id="fc12" class="fcell"></div>
+		<div id="fc13" class="fcell"></div>
+
+		<div id="fc20" class="fcell"></div>
+		<div id="fc21" class="fcell"></div>
+		<div id="fc22" class="fcell"></div>
+		<div id="fc23" class="fcell"></div>
+
+		<div id="fc30" class="fcell"></div>
+		<div id="fc31" class="fcell"></div>
+		<div id="fc32" class="fcell"></div>
+		<div id="fc33" class="fcell"></div>
+	</div>
+	<script src="2048.js"></script>
+	<script>
+		game.startGame();
+		document.onkeydown=function(){
+		var evt=window.event||arguments[0];
+		if (evt.keyCode==37)
+		{
+			game.startLeft();
+		}
+		else if (evt.keyCode==39)
+		{
+			game.startRight();
+		}
+		else if (evt.keyCode==38)
+		{
+			game.startup();
+		}
+		else if (evt.keyCode==40)
+		{
+			game.startdown();
+		}
+		}
+	</script>
+</body>
+</html>

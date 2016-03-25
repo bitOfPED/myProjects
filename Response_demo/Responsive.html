@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <style>
+        body {
+            background: #eeeeee;
+            font: normal 100% 微软雅黑;
+        }
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #034c50;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.3em;
+        }
+        .container:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header ul{
+            list-style: none;
+        }
+        .header ul li {
+            float: left;
+            padding: 10px 10px;
+        }
+        .search {
+            float: right;
+            margin: 10px 10px;
+            font-size: 1.0em;
+            padding: 0;
+        }
+        .main {
+            margin-top: 10px;;
+        }
+        .left {
+            background: #57085B;
+            border-radius: 5px;
+            width: 20%;
+            float: left;
+            color: #000;
+            padding: 10px 0;
+        }
+        .left li{
+            list-style: none;
+            background: #eee;
+            padding: 8px;
+            margin: 10px 20px;
+        }
+        .center {
+            float: left;
+            border-radius: 5px;
+            background: #FFB951;
+            width: 60%;
+            padding: 10px 0;
+            margin: 0 1%;
+        }
+        .center img{
+            max-width: 23%;
+        }
+        .right {
+            background: #5b5708;
+            border-radius: 5px;
+            float: left;
+            width: 18%;
+            color: #fff;
+        }
+        .footer{
+            margin-top: 20px;
+            border-top: 2px solid #08575B;
+            text-align: center;
+            padding: 10px;
+        }
+        @media (max-width: 640px) {
+            .left{
+                width: 25%;
+            }
+            .center{
+                width: 74%;
+                margin: 0 0 0 1px;
+            }
+            .right {
+                display: none;
+            }
+        }
+        @media (max-width: 480px) {
+            .left{
+                width: 100%;
+                float:none;
+            }
+            .center{
+                width: 100%;
+                float:none;
+                margin:10px 0;
+            }
+            .center img{
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="header container">
+      <ul>
+          <li>首页</li>
+          <li>影集</li>
+          <li>活动</li>
+      </ul>
+      <input class="search" placeholder="search...">
+  </div>
+  <div class="main container">
+      <div class="left">
+          <ul>
+              <li>豆蔻年华</li>
+              <li>花样青春</li>
+              <li>激情岁月</li>
+          </ul>
+      </div>
+      <div class="center">
+          <img src="img/1.jpg">
+          <img src="img/2.jpg">
+          <img src="img/3.jpg">
+          <img src="img/4.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea excepturi ipsum laboriosam magni quibusdam! Atque dicta laudantium libero nam nesciunt nobis quidem recusandae sapiente. Dolore ea et hic laudantium provident.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet architecto commodi consectetur cupiditate et ex fuga illo in ipsum magni, modi molestiae nesciunt nihil nisi, obcaecati recusandae tempora tempore.</p>
+      </div>
+      <div class="right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet assumenda consequuntur deleniti deserunt error fugiat ipsam modi nemo praesentium quod reiciendis, saepe sit. Adipisci hic natus praesentium quia quis.</p>
+      </div>
+  </div>
+  <div class="footer container">
+      COPYLEFT ® TERENA.COM.CN
+  </div>
+</body>
+</html>
